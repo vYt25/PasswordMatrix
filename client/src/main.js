@@ -11,7 +11,7 @@ import '@mdi/font/css/materialdesignicons.css'
 
 const pad = (val) => (val ? val.toString().padStart(5, '0') : null);
 
-const socket = io(`${window.location.protocol}//${window.location.hostname}:9000`);
+// const socket = io(`${window.location.protocol}//${window.location.hostname}:9000`);
 
 let timestamp = new Date().toISOString().split('T')
 timestamp[1] = timestamp[1].split('.')[0]
@@ -25,7 +25,7 @@ Vue.prototype.$axios = require('axios')
 Vue.prototype.$api = `${window.location.protocol}//${window.location.hostname}:5000/api`
 Vue.prototype.$themeColor = '#208895';
 Vue.prototype.$pad = pad
-Vue.prototype.$socket = socket
+// Vue.prototype.$socket = socket
 Vue.prototype.$md5 = require('md5')
 Vue.prototype.$bus = new Vue;
 Vue.prototype.$iziToast = VueIziToast;
